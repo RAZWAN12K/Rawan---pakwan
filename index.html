@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #ff5733;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 24px;
+    }
+    .menu-section {
+      margin: 20px;
+    }
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #ff5733;
+      padding-bottom: 5px;
+    }
+    .item {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .item img {
+      width: 120px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 8px;
+      float: right;
+      margin-left: 10px;
+    }
+    .price {
+      color: #ff5733;
+      font-weight: bold;
+    }
+    .order-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #ff5733;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .order-btn:hover {
+      background: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🍽️ Welcome to Our Restaurant</header>
+
+  <!-- Main Dishes -->
+  <div class="menu-section">
+    <h2>🥘 Main Dishes</h2>
+    <div class="item">
+      <h3>Chicken Biryani <span class="price">Rs. 250</span></h3>
+      <p>Traditional spicy rice with chicken.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjzkb47aRXgzVXd9Z2-BP7eWy-t3WnzSNZhA&s" alt="Biryani">
+      <button class="order-btn" onclick="placeOrder('Chicken Biryani',250)">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Beef Biryani <span class="price">Rs. 300</span></h3>
+      <p>Delicious beef biryani with rich spices.</p>
+      <img src="https://i.ytimg.com/vi/40k1FyEbHt0/sddefault.jpg" alt="Beef Biryani">
+      <button class="order-btn" onclick="placeOrder('Beef Biryani',300)">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Chicken Karahi (Half) <span class="price">Rs. 600</span></h3>
+      <p>Spicy chicken cooked in traditional karahi style.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRXnY879VrjFjXVZcythuINCdu5ZVQxFi6Ow&s" alt="Chicken Karahi">
+      <button class="order-btn" onclick="placeOrder('Chicken Karahi',600)">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Mutton Karahi (Half) <span class="price">Rs. 1200</span></h3>
+      <p>Juicy mutton cooked in spicy karahi sauce.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsISz3FkgfNRHkh-WsuzolR3WJe32olyET2g&s" alt="Mutton Karahi">
+      <button class="order-btn" onclick="placeOrder('Mutton Karahi',1200)">Order Now</button>
+    </div>
+  </div>
+
+  <!-- BBQ Items -->
+  <div class="menu-section">
+    <h2>🍢 BBQ Items</h2>
+    <div class="item">
+      <h3>Chicken Tikka <span class="price">Rs. 300</span></h3>
+      <p>Grilled chicken with spicy flavor.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzjSTAYdIs9x9NM8NwRHvjUUerXoPO1kU3Ig&s" alt="Chicken Tikka">
+      <button class="order-btn" onclick="placeOrder('Chicken Tikka',300)">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Seekh Kabab (Chicken) <span class="price">Rs. 200</span></h3>
+      <p>Juicy minced chicken grilled on skewers.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4cAu0oO4zbJHNKOIo4LQ8EO1_IbCDjRQQKw&s" alt="Seekh Kabab">
+      <button class="order-btn" onclick="placeOrder('Seekh Kabab (Chicken)',200)">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Seekh Kabab (Beef) <span class="price">Rs. 250</span></h3>
+      <p>Spicy minced beef grilled to perfection.</p>
+      <img src="https://i.ytimg.com/vi/8M-tuQVpBwc/maxresdefault.jpg" alt="Beef Kabab">
+      <button class="order-btn" onclick="placeOrder('Seekh Kabab (Beef)',250)">Order Now</button>
+    </div>
+  </div>
+
+  <!-- Fast Food -->
+  <div class="menu-section">
+    <h2>🍔 Fast Food</h2>
+    <div class="item">
+      <h3>Zinger Burger <span class="price">Rs. 350</span></h3>
+      <p>Crispy chicken fillet with mayo & lettuce.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXCNI9W3Qaf6rTufOhueqOSlBf0c3AIjhWRA&s" alt="Zinger Burger">
+      <button class="order-btn" onclick="placeOrder('Zinger Burger',350)">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Chicken Shawarma <span class="price">Rs. 200</span></h3>
+      <p>Grilled chicken wrapped with sauces.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeIPgm6k3dhLRMsYcOl97_7sE7wYP0medhmg&s" alt="Shawarma">
+      <button class="order-btn" onclick="placeOrder('Chicken Shawarma',200)">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Fries (Regular) <span class="price">Rs. 150</span></h3>
+      <p>Crispy golden french fries.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJpS2fVVjN4sU3W1-nQkDFsS10j0eb0V0Jeg&s" alt="Fries">
+      <button class="order-btn" onclick="placeOrder('Fries (Regular)',150)">Order Now</button>
+    </div>
+  </div>
+
+  <!-- Drinks -->
+  <div class="menu-section">
+    <h2>🥤 Drinks</h2>
+    <div class="item">
+      <h3>Coca Cola <span class="price">Rs. 100</span></h3>
+      <p>Chilled refreshing drink (500ml).</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3M-xR4PTf-oldWP8s2UWBCDxtZatNqXs1NA&s" alt="Coca Cola">
+      <button class="order-btn" onclick="placeOrder('Coca Cola',100)">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Fresh Lime <span class="price">Rs. 120</span></h3>
+      <p>Fresh lime juice with soda.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRubETTkVqSWAIp_oup0GvWkP09Tk9Vkj9XeQ&s" alt="Fresh Lime">
+      <button class="order-btn" onclick="placeOrder('Fresh Lime',120)">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Mango Shake <span class="price">Rs. 180</span></h3>
+      <p>Sweet mango shake with ice cream.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCGioqMu-grMYe5Q0i6OKumvul9WKkjUZ28Q&s" alt="Mango Shake">
+      <button class="order-btn" onclick="placeOrder('Mango Shake',180)">Order Now</button>
+    </div>
+  </div>
+
+  <!-- Desserts -->
+  <div class="menu-section">
+    <h2>🍨 Desserts</h2>
+    <div class="item">
+      <h3>Kheer <span class="price">Rs. 120</span></h3>
+      <p>Sweet rice pudding with milk & nuts.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Pp67YoVcbOJs_C14ZcBK9tCzxzNQ3VKvUA&s" alt="Kheer">
+      <button class="order-btn" onclick="placeOrder('Kheer',120)">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Gulab Jamun (2 pcs) <span class="price">Rs. 100</span></h3>
+      <p>Sweet fried balls soaked in sugar syrup.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq1jhQlNVHANPgYVu9RFC4b-OaHWcklJ7TLw&s" alt="Gulab Jamun">
+      <button class="order-btn" onclick="placeOrder('Gulab Jamun (2 pcs)',100)">Order Now</button>
+    </div>
+    <div class="item">
+      <h3>Ice Cream (1 scoop) <span class="price">Rs. 120</span></h3>
+      <p>Creamy ice cream scoop in different flavors.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTw-9zG6xFziblZYQGQJJiX17CgBWmbq3LqA&s" alt="Ice Cream">
+      <button class="order-btn" onclick="placeOrder('Ice Cream (1 scoop)',120)">Order Now</button>
+    </div>
+  </div>
+
+  <script>
+  function placeOrder(item, price){
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    let order = {
+      item: item,
+      price: price,
+      time: new Date().toLocaleString(),
+      table: prompt("Enter Table Number") // agar table number lena ho
+    };
+
+    orders.push(order);
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    alert(`Order placed for ${item} (Rs. ${price})`);
+  }
+</script>
+
+  <script>
+  function placeOrder(item, price){
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    let order = {
+      item: item,
+      price: price,
+      time: new Date().toLocaleString(),
+      table: prompt("Enter Table Number") // agar table number lena ho
+    };
+
+    orders.push(order);
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    alert(`Order placed for ${item} (Rs. ${price})`);
+  }
+</script>
+
+  <script>
+  function placeOrder(item, price){
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    let order = {
+      item: item,
+      price: price,
+      time: new Date().toLocaleString(),
+      table: prompt("Enter Table Number") // agar table number lena ho
+    };
+
+    orders.push(order);
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    alert(`Order placed for ${item} (Rs. ${price})`);
+  }
+</script>
+
+  <script>
+  function placeOrder(item, price){
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    let order = {
+      item: item,
+      price: price,
+      time: new Date().toLocaleString(),
+      table: prompt("Enter Table Number") // agar table number lena ho
+    };
+
+    orders.push(order);
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    alert(`Order placed for ${item} (Rs. ${price})`);
+  }
+</script>
+
+  <script>
+  function placeOrder(item, price){
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    let order = {
+      item: item,
+      price: price,
+      time: new Date().toLocaleString(),
+      table: prompt("Enter Table Number") // agar table number lena ho
+    };
+
+    orders.push(order);
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    alert(`Order placed for ${item} (Rs. ${price})`);
+  }
+</script>
+
+  <script>
+  function placeOrder(item, price){
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    let order = {
+      item: item,
+      price: price,
+      time: new Date().toLocaleString(),
+      table: prompt("Enter Table Number") // agar table number lena ho
+    };
+
+    orders.push(order);
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    alert(`Order placed for ${item} (Rs. ${price})`);
+  }
+</script>
+
+
+</body>
+</html>
